@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Kanit", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #fff7fc;
+  color: #444;
+}
+
+.hero {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.hero .overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  color: white;
+  text-shadow: 1px 1px 4px #000;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 5px 0 0;
+}
+
+.navbar {
+  background: #ffe1f1;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #ffc1e6;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #d23c80;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.navbar a:hover {
+  background: #ffd4e8;
+}
+
+main {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+section:nth-child(even) {
+  animation-delay: 0.2s;
+}
+
+h2 {
+  color: #f05fa5;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #c84e90;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
